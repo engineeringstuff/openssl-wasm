@@ -22,11 +22,9 @@ LDFLAGS="\
   -s USE_ES6_IMPORT_META=0\
   -s ALLOW_MEMORY_GROWTH=1\
   -s MALLOC=emmalloc\
+  -s WASM_BIGINT=1\
+  -s MAYBE_WASM2JS=1\
 "
-#LDFLAGS="\
-#    -s WASM_BIGINT=1\
-#    -s MAYBE_WASM2JS=1\
-#    -s SAFE_HEAP=1"
 
 export LDFLAGS
 export CC=emcc
