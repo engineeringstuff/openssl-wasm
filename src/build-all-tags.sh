@@ -11,13 +11,13 @@ buildOpenSSLWASM() {
     # $2 is the tag/branch
     mkdir -p ../bin/$2;
 
-    if [ ! -f "../bin/$2/$1" ]; then
-        touch "../bin/$2/$1"
+    if [ ! -f "../bin/$2/$1.hash" ]; then
+        touch "../bin/$2/$1.hash"
 
         echo "Building $2";
         ./build-tag.sh $2;
     else
-        echo "Hash already exists ../bin/$2/$1"
+        echo "Hash already exists ../bin/$2/$1.hash"
     fi
 }
 
