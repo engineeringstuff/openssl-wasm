@@ -1,3 +1,4 @@
 bin/**/*.txt
 **/*.hash
 .DS_Store
+bin/**/example-test.js
