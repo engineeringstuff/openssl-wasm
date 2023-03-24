@@ -1,0 +1,24 @@
+{
+  "name": "openssl-wasm",
+  "version": "1.0.1",
+  "description": "WebAssembly (WASM) builds of OpenSSL",
+  "main": "bin/OpenSSL_1_0_1-stable/openssl.js",
+  "scripts": {
+    "test": "echo \"No test specified\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/engineeringstuff/openssl-wasm.git"
+  },
+  "keywords": [
+    "openssl",
+    "wasm",
+    "webassembly"
+  ],
+  "author": "Matt Johnson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/engineeringstuff/openssl-wasm/issues"
+  },
+  "homepage": "https://github.com/engineeringstuff/openssl-wasm#readme"
+}

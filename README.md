@@ -2,6 +2,9 @@
 ## What is this?
 This repository holds the source files and generated WebAssembly (WASM) output for OpenSSL compiled to WASM.
 
+## Versioning
+The versions here are linked to OpenSSL versions, so if you `require('openssl-wasm')` and get OpenSSL `3.1.0`, but you want OpenSSL `1.1.1` then you should install that with `npm install openssl-wasm@1.1.1`
+
 ## Getting Started
 The following assumes that you are working in a `bash` terminal with `docker` installed and available.
 
