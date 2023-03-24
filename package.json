@@ -2,7 +2,7 @@
   "name": "openssl-wasm",
   "version": "1.0.1",
   "description": "WebAssembly (WASM) builds of OpenSSL",
-  "main": "bin/OpenSSL_1_0_1-stable/openssl.js",
+  "main": "bin/OpenSSL_1_0_2-stable/openssl.js",
   "scripts": {
     "test": "echo \"No test specified\""
   },
@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/engineeringstuff/openssl-wasm#readme",
   "files": [
-    "bin/OpenSSL_1_0_1-stable/openssl.js",
-    "bin/OpenSSL_1_0_1-stable/openssl.wasm"
+    "bin/OpenSSL_1_0_2-stable/openssl.js",
+    "bin/OpenSSL_1_0_2-stable/openssl.wasm"
   ]
 }
