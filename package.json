@@ -1,6 +1,6 @@
 {
   "name": "openssl-wasm",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "WebAssembly (WASM) builds of OpenSSL",
   "main": "bin/OpenSSL_1_0_2-stable/openssl.js",
   "scripts": {
