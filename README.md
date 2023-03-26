@@ -35,3 +35,52 @@ The following assumes that you are working in a `bash` terminal with `docker` in
 	* Should be copied to a local folder
 	* Should have an `openssl.js` file (Module) to load the WebAssembly
 	* Should have an `openssl.wasm` file which is the WebAssembly version of OpenSSL
+
+## Using it
+You can this directly from javascript using node or even in the web-browser, we use the default `emscripten` settings so that it targets as many platforms as possible and should be usable with [`wasm2js`](https://github.com/thlorenz/wasm2js)
+
+First install this library
+```bash
+npm install openssl-wasm
+```
+
+Then you can start with something like this:
+
+```javascript
+import opensslWASM from 'openssl-wasm';
+
+const module = {
+	print: function (text) {
+		console.log(`stdout: ${text}`);
+	},
+	printErr: function (text) {
+		console.error(`stderr: ${text}`);
+	}
+};
+
+(async () => {
+	const openSSL = await opensslWASM(module);
+	await openSSL.callMain(['version']);
+})().catch((errorDetail) => {
+	console.error(`stderr: ${errorDetail}`);
+});
+```
+
+### Typescript
+If you're looking for an easy, drop-in Typescript ambient module, then you can use something like the following, but you'll need to install `@types/emscripten` first.
+
+```typescript
+declare module 'openssl-wasm' {
+	import { EmscriptenModule, EmscriptenModuleFactory } from '@types/emscripten';
+
+	interface CallMain extends EmscriptenModule {
+		ccall: typeof ccall;
+		callMain: typeof ccall;
+	}
+
+	function opensslWASM(module: EmscriptenModule<CallMain>): EmscriptenModuleFactory<CallMain>;
+
+	export default opensslWASM;
+}
+
+```
